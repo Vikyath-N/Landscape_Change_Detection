@@ -60,8 +60,11 @@ def process_images(folder_path):
                 highlighted_changes = processor.highlight_changes(image2, changes)
                 percent_change = processor.calculate_percent_change(changes)
 
+                # Extracting the specific lake name from the filename
+                lake_name = before_file.split('_')[0] + ' ' + before_file.split('_')[1]
+
                 plt.imshow(highlighted_changes)
-                plt.title(f'Detected Changes in {lake} ({percent_change:.2f}% change)')
+                plt.title(f'Detected Landscape Changes in {lake_name} ({percent_change:.2f}% change)')
                 plt.show()
             else:
                 print(f"Error loading images for {lake}")
