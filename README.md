@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project aims to assess landscape changes around various lakes in California over a period of approximately 5 years. Utilizing the power of Python and advanced image processing AI tools, the project focuses on detecting significant changes in the landscapes of these lakes. The primary goal is to quantify and visualize the environmental changes that have occurred, providing insights into the effects of climate change, human activities, or natural factors on these ecosystems.
+This project aims to assess landscape changes around various lakes in California over approximately 5 years. Utilizing the power of Python and advanced image-processing AI tools, the project focuses on detecting significant changes in the landscapes of these lakes. The primary goal is to quantify and visualize the environmental changes that have occurred, providing insights into the effects of climate change, human activities, or natural factors on these ecosystems.
 
 ## How It Works
 
@@ -10,7 +10,7 @@ The project uses a set of images of different lakes in California, captured at t
 
 Key features of the project include:
 - Image processing to handle differences in image sizes and formats.
-- Change detection to identify areas in the landscape that have undergone changes over the years.
+- Change detection to identify areas in the landscape that have changed over the years.
 - Visual representation of changes with highlighted areas.
 - Calculation of the percentage of change for each lake, providing a quantitative measure of the change.
 
@@ -30,7 +30,7 @@ Key features of the project include:
 1. Place the 'Before' and 'After' images of each lake in the 'images' folder. Ensure that the images are named according to the format: LakeName_Before.filetype and LakeName_After.filetype.
 2. Run the script motion.py:
     ```bash
-    python motion.py
+    python3 motion.py
 
 ### Contributing
 Contributions to this project are welcome. Please feel free to fork the repository and submit pull requests.
