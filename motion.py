@@ -1,7 +1,7 @@
-
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 class ImageProcessor:
     def __init__(self):
@@ -28,25 +28,25 @@ class ImageProcessor:
         threshed = self.threshold_difference(difference)
         return threshed
 
-def main():
-    # Paths to the two images for comparison
-    image_path1 = 'path_to_first_image.jpg'
-    image_path2 = 'path_to_second_image.jpg'
-
-    # Create an instance of the ImageProcessor class
+def process_images(folder_path):
+    # List all files in the folder
+    files = os.listdir(folder_path)
+    lakes = set([file.split('_')[0] for file in files])
     processor = ImageProcessor()
+    
+    for lake in lakes:
+        before_path = os.path.join(folder_path, f'{lake}_Before.jpg')
+        after_path = os.path.join(folder_path, f'{lake}_After.jpg')
+        image1 = processor.load_image(before_path)
+        image2 = processor.load_image(after_path)
+        changes = processor.detect_changes(image1, image2)
+        plt.imshow(changes, cmap='gray')
+        plt.title(f'Detected Changes in {lake}')
+        plt.show()
 
-    # Load the images
-    image1 = processor.load_image(image_path1)
-    image2 = processor.load_image(image_path2)
-
-    # Detect changes
-    changes = processor.detect_changes(image1, image2)
-
-    # Display the changes
-    plt.imshow(changes, cmap='gray')
-    plt.title('Detected Changes')
-    plt.show()
+def main():
+    images_folder = 'path_to_images_folder'  # Update with the path to your 'images' folder
+    process_images(images_folder)
 
 if __name__ == '__main__':
     main()
