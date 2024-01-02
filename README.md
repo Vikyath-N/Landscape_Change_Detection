@@ -31,6 +31,10 @@ Key features of the project include:
 2. Run the script motion.py:
     ```bash
     python3 motion.py
+### Feature Demonstrations
+
+#### Landscape Change Detection
+![Landscape Change Detection]([images/lake_change_example.jpg](https://drive.google.com/file/d/1vfJ7VIKYoseyiujK3mO5JV69lKuVycnW/view?usp=sharing))
 
 ### Contributing
 Contributions to this project are welcome. Please feel free to fork the repository and submit pull requests.
